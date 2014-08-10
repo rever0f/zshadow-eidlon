@@ -1,0 +1,561 @@
+### Virtual Machines
+
+Classification of virtual machines can be based on
+the degree to which they implement functionality
+of targeted real machines. That way, system
+virtual machines (also known as full
+virtualization VMs) provide a complete substitute
+for the targeted real machine and a level of
+functionality required for the execution of a
+complete operating system. On the other hand,
+process virtual machines are designed to execute a
+single computer program by providing an abstracted
+and platform-independent program execution
+environment.
+
+Different virtualization techniques are used,
+based on the desired usage. Native execution is
+based on direct virtualization of the underlying
+raw hardware, thus it provides multiple
+"instances" of the same architecture a real
+machine is based on, capable of running complete
+operating systems. Some virtual machines can also
+emulate different architectures and allow
+execution of software applications and operating
+systems written for another CPU or
+architecture. Operating system–level
+virtualization allows resources of a computer to
+be partitioned via kernel's support for multiple
+isolated user space instances, which are usually
+called containers and may look and feel like real
+machines from the end users' point of view.
+
+
+### Nagios
+
+Nagios, originally created under the name
+NetSaint, was written and is currently maintained
+by Ethan Galstad along with a group of developers
+who are actively maintaining both the official and
+unofficial plugins. Nagios is a recursive acronym:
+"Nagios Ain't Gonna Insist On Sainthood",[3]
+'Sainthood' being a reference to the original name
+NetSaint, which was changed in response to a legal
+challenge by owners of a similar trademark.[4]
+'Agios' is also a transliteration of the Greek
+word άγιος which means 'saint'.
+
+
+### Logging
+
+#### Auditing
+
+Auditing, then, would be used to denote data that
+is not immediately discardable. In other words:
+data that is assembled in the auditing process, is
+stored persistently, is protected by authorization
+schemes and is, always, connected to some end-user
+functional requirement.
+
+#### Common Log
+
+The Common Log Format, also known as the NCSA
+Common log format,[1] is a standardized text file
+format used by web servers when generating server
+log files. Because the format is standardized, the
+files may be analyzed by a variety of web analysis
+programs.
+
+#### Prodigal
+
+Proactive Discovery of Insider Threats Using Graph
+Analysis and Learning or PRODIGAL is a computer
+system for predicting anomalous behavior amongst
+humans by data mining network traffic such as
+emails, text messages and log entries.[1] It is
+part of DARPA's Anomaly Detection at Multiple
+Scales (ADAMS) project.[2] The initial schedule is
+for two years and the budget $9 million.[3]
+
+It uses graph theory, machine learning,
+statistical anomaly detection, and
+high-performance computing to scan larger sets of
+data more quickly than in past systems. The amount
+of data analyzed is in the range of terabytes per
+day.
+
+The crux is:
+
+- Know the need of logging.
+- Understand the options available and which suits you best (varies with Platform/OS/etc)
+- Plan the strategy in advance before implementation.
+- Keep reviewing the make changes.
+                
+[stacklog]:http://stackoverflow.com/questions/673575/what-are-the-best-practices-for-logging-an-enterprise-application
+
+### Backups
+
+#### technet
+
+Monitor the network report for backup-related information.
+
+You should routinely review network reports to
+ensure that backups complete successfully and that
+no backup-related warnings or errors occur. By
+monitoring network reports, you can catch and
+correct backup issues before they result in loss
+of data.
+
+Use external storage drives that are compatible with your server.
+
+Compatible drives support USB 2.0, IEEE 1394, or
+eSATA. You should visit the website for your
+storage drive manufacturer to ensure that the
+drive is supported on computers running Windows
+Server 2008 R2.
+
+Use an external hard disk with at least 1.5 times
+the storage capacity of the items that you want to
+back up.
+
+Using an external hard disk with extended capacity
+helps ensure that you do not have to replace the
+hard disk too soon while the amount of stored data
+grows. Because server backups are incremental, an
+external hard disk of 300 GB or more can hold
+months of backup data.
+
+Use multiple external hard disks and rotate them.
+
+You should backup server data to multiple external
+hard disks and rotate the hard disks between
+onsite and offsite storage locations. Doing so can
+improve your disaster preparedness planning by
+helping you recover your data if physical damage
+occurs to the hardware onsite.
+
+Rotate backup drives on a regular basis.
+
+Establish a backup storage plan that includes the
+regular rotation of your external hard disks. To
+help protect backups in case of disaster, you
+should store at least one backup hard disk at a
+secure offsite location.
+
+[techbackup]:http://technet.microsoft.com/en-us/library/backup-best-practices-2.aspx
+
+Separate your data from your operating systems and
+applications. Ideally, you should save data files
+on a separate drive or partition. This will make
+protection easier in many ways, and it could save
+your bacon. For example, you can restore your
+system to a previous state without reversing your
+data to that point in time. Our favorite
+partitioning tools are Acronis Disk Director Suite
+9.0 and Norton PartitionMagic 8.0.
+
+[pcmagbackup]: http://www.pcmag.com/article2/0,2817,1847364,00.asp
+
+#### Full only / System imaging
+
+A repository of this type contains complete system
+images taken at one or more specific points in
+time. This technology is frequently used by
+computer technicians to record known good
+configurations. Imaging is generally more useful
+for deploying a standard configuration to many
+systems rather than as a tool for making ongoing
+backups of diverse systems.
+
+#### Incremental
+
+An incremental style repository aims to make it
+more feasible to store backups from more points in
+time by organizing the data into increments of
+change between points in time. This eliminates the
+need to store duplicate copies of unchanged data:
+with full backups a lot of the data will be
+unchanged from what has been backed up
+previously. Typically, a full backup (of all
+files) is made on one occasion (or at infrequent
+intervals) and serves as the reference point for
+an incremental backup set. After that, a number of
+incremental backups are made after successive time
+periods. Restoring the whole system to the date of
+the last incremental backup would require starting
+from the last full backup taken before the data
+loss, and then applying in turn each of the
+incremental backups since then.[4] Additionally,
+some backup systems can reorganize the repository
+to synthesize full backups from a series of
+incrementals.
+
+#### Differential
+
+Each differential backup saves the data that has
+changed since the last full backup. It has the
+advantage that only a maximum of two data sets are
+needed to restore the data. One disadvantage,
+compared to the incremental backup method, is that
+as time from the last full backup (and thus the
+accumulated changes in data) increases, so does
+the time to perform the differential
+backup. Restoring an entire system would require
+starting from the most recent full backup and then
+applying just the last differential backup since
+the last full backup.
+
+Note: Vendors have standardized on the meaning of
+the terms "incremental backup" and "differential
+backup". However, there have been cases where
+conflicting definitions of these terms have been
+used. The most relevant characteristic of an
+incremental backup is which reference point it
+uses to check for changes. By standard definition,
+a differential backup copies files that have been
+created or changed since the last full backup,
+regardless of whether any other differential
+backups have been made since then, whereas an
+incremental backup copies files that have been
+created or changed since the most recent backup of
+any type (full or incremental). Other variations
+of incremental backup include multi-level
+incrementals and incremental backups that compare
+parts of files instead of just the whole file.
+
+#### Reverse delta
+
+A reverse delta type repository stores a recent
+"mirror" of the source data and a series of
+differences between the mirror in its current
+state and its previous states. A reverse delta
+backup will start with a normal full backup. After
+the full backup is performed, the system will
+periodically synchronize the full backup with the
+live copy, while storing the data necessary to
+reconstruct older versions. This can either be
+done using hard links, or using binary diffs. This
+system works particularly well for large, slowly
+changing, data sets. Examples of programs that use
+this method are rdiff-backup and Time Machine.
+
+#### Cost
+
+Industry data suggests that for every 1TB of data
+that must be provided to attorneys during
+discovery, the associated cost is $18M.  Imagine
+the cost - at $400 per hour - for lawyers to go
+over every document, email and other artifact in a
+1TB production of evidence related to a
+litigation.  The goal is to ensure you only have
+to provide a minimum amount of data, and only data
+that is relevant to the case.  Too much data could
+drive your company to the poor house!
+
+The other directly related cost from having too
+much backup data is from offsite portable storage
+media storage and management.  Tape storage is
+more expensive than you think - especially when
+you have 150,000 tapes offsite if you only really
+need 25,000.  Additionally, think of the cost of
+having to provide a copy of that data in response
+to a discovery request.
+
+Managing and tracking offsite media is also
+expensive, and every time media is exchanged there
+is a handling fee associated with it.  While tape
+may be one of the most reliable long-term storage
+mediums for data, managing it over times can be
+quite costly.
+
+Outside review fees (1TB @ $1000/GB) $1,000,000[1]
+
+[1]:http://www.iqpc.com/uploadedFiles/EventRedesign/UK/2010/May/11376004/Assets/DIG-003_eDiscovery_WP_V1.pdf
+
+
+### web
+
+#### boran
+
+Network filtering:
+
+Place your web server(s) in a DMZ. Set your
+firewall to drop connections to your web server on
+all ports but http (port 80) or https (port 443).
+
+Host based security:
+
+Remove all unneeded services from your web server,
+keeping FTP (but only if you need it) and a secure
+login capability such as secure shell. An unneeded
+service can become an avenue of attack.
+
+Limit the number of persons having administrator
+or root level access.
+
+Apply relevant security patches as soon as they
+are announced and tested on a pre-production
+system.
+
+Disallow all remote administration unless it is
+done using a one-time password or an encrypted
+link.
+
+If the machine must be administered remotely,
+require that a secure capability such as secure
+shell is used to make a secure connection. Do not
+allow telnet or non-anonymous ftp (those requiring
+a username and password) connections to this
+machine from any untrusted site. It would also be
+good to limit these connections only to a minimum
+number of secure machines and have those machines
+reside within your Intranet.
+
+Configuring the Web service/application:
+
+If you must use a GUI interface at the console,
+remove the commands that automatically start the
+window manager from the .RC startup directories
+and then create a startup command for the window
+manager. You can then use the window manager when
+you need to work on the system, but shut it down
+when you are done. Do not leave the window manager
+running for any extended length of time.
+
+Run the web server in a chroot-ed part of the
+directory tree so it cannot access the real system
+files.
+
+Run the anonymous FTP server (if you need it) in a
+chroot-ed part of the directory tree that is
+different from the web server's tree.
+
+Remove ALL unnecessary files such as phf from the
+scripts directory /cgi-bin.
+
+Remove the "default" document trees that are
+shipped with Web servers such as IIS and ExAir.
+
+Apply relevant security patches as soon as they
+are announced and tested on a pre-production
+system.
+
+Auditing/logging:
+
+Log all user activity and maintain those logs
+either in an encrypted form on the web server or
+store them on a separate machine on your Intranet,
+or write to "write-once" media.
+
+Monitor system logs regularly for any suspicious
+activity.
+
+Install some trap macros to watch for attacks on
+the server (such as the PHF attack).
+
+Create macros that run every hour or so that would
+check the integrity of passwd and other critical
+files.
+
+When the macros detect a change, they should send
+an e-mail to the system manager, write a message
+to logs, set off a pager, etc..
+
+Content management:
+
+Do all updates from your Intranet. Maintain your
+web page originals on a server on your Intranet
+and make all changes and updates here; then "push"
+these updates to the public server through an SSH
+or SSL connection. If you do this on a hourly
+basis, you can avoid having a corrupted server
+exposed for a long period of time.
+
+Write a script to download HTML pages and check
+against a template, if changes are noted, upload
+the correct version.
+
+
+Intrusion Detection:
+
+Scan your web server periodically with tools like
+ISS, nmap or Satan to look for vulnerabilities.
+
+Have intrusion detection software monitor the
+connections to the server. Set the detector to
+alarm on known exploits and suspicious activities
+and to capture these sessions for review. This
+information can help you recover from an intrusion
+and strengthen your defenses.
+                                                                                    
+
+Other useful documents
+
+CIAC also published a document called Securing
+Internet Information Servers which has a chapter
+on Securing World Wide Web Servers
+http://www.ciac.org/ciac/documents/ciac2308.html
+
+The first is a publication that was developed by
+SANS and The Intranet Institute after the web
+server at the U.S. Department of Justice was
+hacked--"Twelve Mistakes To Avoid In Managing
+Security-For the Web."
+http://www.computerworld.com/home/online9697.nsf/all/971001secure.
+
+SANS also publishes a document called "14 Steps to
+Avoiding Disaster with Your Web Site."
+
+Another web site that you should book mark is
+http://www.w3.org/Security/faq/. This is a web
+security FAQ (Frequently Asked Questions) that is
+maintained by The World Wide Web Consortium
+http://www.w3.org/. They have security sections
+for each of the major operating systems used today
+for web servers:
+http://www.w3.org/Security/faq/wwwsf8.html.
+
+http://webcompare.internet.com compares how well
+different web servers compare to the standards.
+
+[boran-web]:http://www.boran.com/security/webserver_practices.html
+
+#### pcmag
+
+1. Don't run unnecessary servers or
+interpreters. If you don't need the FTP (File
+Transfer Protocol) server that's bundled with your
+Web server, don't give hackers another target:
+Disable it, or don't install it at all. Similarly,
+disable scripting languages and sample scripts
+that you don't absolutely require.
+
+2. Subscribe to your server vendor's security
+alert list. Or at least monitor its Web site
+regularly for patches and apply them
+immediately. The Computer Emergency Response Team
+advisory list at www.cert.org/advisories/ can be a
+useful resource. Don't forget to watch out for
+alerts and patches for your OS as well as for the
+Web server itself.
+
+3. Practice good password habits. Avoid simple,
+easy-to-guess passwords, particularly for
+privileged administrator accounts. On the other
+hand, don't make your password rules so draconian
+that users resort to writing them down. Always
+change default passwords and eliminate unnecessary
+accounts (such as guest). Make sure passwords are
+actually enabled for sensitive areas and
+administration functions.
+
+4. Know what's happening on your network. Many Web
+servers are free and easy to install, so watch out
+for well-meaning but ill-informed users who may
+inadvertently create security holes.
+
+5. Use your operating system's permission
+mechanism. Usually the Web server runs with the
+permission of a particular user. Make sure that
+user has appropriately limited access.
+
+6. Monitor your logs. Your Web server keeps track
+of every request; review your logs regularly for
+signs of out-of-the-ordinary behavior.
+
+7. Segregate public and private data. Don't store
+sensitive data on the same machines as public Web
+servers if you don't have to do it. For an
+extranet, you might consider a "sacrificial lamb"
+configuration, where a Web server sits outside the
+firewall so that it doesn't jeopardize corporate
+data behind the firewall.
+
+8. Be careful with your server
+configuration. Limit executable files to specific
+directories, and make sure their source codes
+can't be downloaded. Turn off features such as
+automatic directory indexing and WebDAV publishing
+support if you don't need them. Run any security
+tools your OS or Web-server vendor provides, such
+as Microsoft's IIS Lockdown Tool, to identify
+potential weak spots.
+
+9. Check programs for security holes. CGI scripts
+on Web servers are particularly prone to security
+breaches, especially if they don't validate
+user-supplied data before accessing files or
+operating-system services.
+
+[pcmag-web]:http://www.pcmag.com/article2/0,2817,11525,00.asp
+
+
+### database
+
+#### applicure
+
+Keep the database server separate from the web
+server.
+
+When installing most web software, the database is
+created for you. To make things easy, this
+database is created on the same server where the
+application itself is being installed, the web
+server. Unfortunately, this makes access to the
+data all too easy for an attacker to access. If
+they are able to crack the administrator account
+for the web server, the data is readily available
+to them.
+
+Instead, a database should reside on a separate
+database server located behind a firewall, not in
+the DMZ with the web server. While this makes for
+a more complicated setup, the security benefits
+are well worth the effort.  Encrypt Stored Files
+
+Encrypt stored files.
+
+WhiteHat security estimates that 83 percent of all
+web sites are vulnerable to at least one form of
+attack. The stored files of a web application
+often contains information about the databases the
+software needs to connect to. This information, if
+stored in plain text like many default
+installations do, provide the keys an attacker
+needs to access sensitive data.  Encrypt Your
+Backups Too
+
+Encrypt back-up files.
+
+Not all data theft happens as a result of an
+outside attack. Sometimes, it’s the people we
+trust most that are the attackers.  Use a WAF
+
+Employ web application firewalls.
+
+The misconception here might be that protecting
+the web server has nothing to do with the
+database. Nothing could be further from the
+truth. In addition to protecting a site against
+cross-site scripting vulnerabilities and web site
+vandalism, a good application firewall can thwart
+SQL injection attacks as well. By preventing the
+injection of SQL queries by an attacker, the
+firewall can help keep sensitive information
+stored in the database away from prying eyes.
+
+Enable Security Controls
+
+While most databases nowadays will enable security
+controls by default, it never hurts for you to go
+through and make sure you check the security
+controls to see if this was done.
+
+Keep in mind that securing your database means you
+have to shift your focus from web developer to
+database administrator. In small businesses, this
+may mean added responsibilities and additional buy
+in from management. However, getting everyone on
+the same page when it comes to security can make a
+difference between preventing an attack and
+responding to an attack.

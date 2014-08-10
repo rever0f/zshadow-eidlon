@@ -14,10 +14,9 @@ ligula tempus, at luctus arcu accumsan.")
 (setq c 370) (setq -c (- 0 c))
 (setq ys (list a b c 0 -c -b -a -b -c 0 c b))
 (setq zs (list 0 -c -b -a -b -c 0 c b a b c))
-(setq zy 0) (setq zz 0)
+(setq zy 0) (setq zz 0) (setq cn 1)
 ;; (setq cn 0)
-(setq cn 1)
-(setq sl "~%###~a~%~%~a~%~%")
+(setq sl "~%### ~a~%~%~a~%~%")
 
 (format t sl t1 no)
 
