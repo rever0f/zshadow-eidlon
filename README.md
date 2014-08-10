@@ -3,9 +3,10 @@
 sysadmin best practices presentation
 
 spiral template created by loc.cl. requires
-[embedded common lisp(ecl)][ecl]. has 12 frames
-and continually shrinks by .3 scale to allow
-spiral. fairly small edit to taste.
+[embedded common lisp(ecl)][ecl]. has 12 frames in
+circle and continually shrinks by .3 scale to
+allow spiral up to title names. fairly small edit
+to taste.
 
 the md file is compiled from markdown through
 [mdpress][mdp] to html and javascript utilizing
