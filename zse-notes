@@ -106,7 +106,8 @@ monitoring network reports, you can catch and
 correct backup issues before they result in loss
 of data.
 
-Use external storage drives that are compatible with your server.
+Use external storage drives that are compatible
+with your server.
 
 Compatible drives support USB 2.0, IEEE 1394, or
 eSATA. You should visit the website for your
@@ -239,6 +240,8 @@ system works particularly well for large, slowly
 changing, data sets. Examples of programs that use
 this method are rdiff-backup and Time Machine.
 
+[wikibackup]:https://en.wikipedia.org/wiki/Backup
+
 #### Cost
 
 Industry data suggests that for every 1TB of data
@@ -270,7 +273,7 @@ quite costly.
 
 Outside review fees (1TB @ $1000/GB) $1,000,000[1]
 
-[1]:http://www.iqpc.com/uploadedFiles/EventRedesign/UK/2010/May/11376004/Assets/DIG-003_eDiscovery_WP_V1.pdf
+[iqpc-backup-cost]:http://www.iqpc.com/uploadedFiles/EventRedesign/UK/2010/May/11376004/Assets/DIG-003_eDiscovery_WP_V1.pdf
 
 
 ### web
@@ -489,6 +492,62 @@ operating-system services.
 
 [pcmag-web]:http://www.pcmag.com/article2/0,2817,11525,00.asp
 
+#### firewall
+
+pf-packet filter
+
+PF (Packet Filter, also written pf) is a BSD
+licensed stateful packet filter, a central piece
+of software for firewalling. It is comparable to
+netfilter (iptables), ipfw and ipfilter. PF is
+developed on OpenBSD, but has been ported to many
+other operating systems including FreeBSD, NetBSD,
+DragonFly BSD, Debian GNU/kFreeBSD, and Mac OS X
+10.7 "Lion" and later.
+
+ipfirewall
+
+ipfirewall or ipfw is a FreeBSD IP packet filter
+and traffic accounting facility. Its ruleset logic
+is similar to many other packet filters except
+IPFilter. ipfw is authored and maintained by
+FreeBSD volunteer staff members. Its syntax
+enables use of sophisticated filtering
+capabilities and thus enables professional users
+to satisfy advanced requirements. It can either be
+used as a loadable kernel module or incorporated
+into the kernel; use as a loadable kernel module
+where possible is highly recommended. ipfw is the
+built-in firewall of Mac OS X[1] and DragonFly
+BSD. Like FreeBSD, ipfw is open source. It is used
+in many FreeBSD-based firewall products, including
+m0n0wall and FreeNAS. There is a port of ipfw and
+the dummynet traffic shaper is available for
+Linux, OpenWrt and Microsoft Windows.[2] wipfw is
+a Windows port of an old (2001) version of ipfw.
+
+ipfilter
+
+IPFilter (commonly referred to as ipf) is an open
+source software package that provides firewall
+services and network address translation (NAT) for
+many UNIX-like operating systems. The author and
+software maintainer is Darren Reed. IPFilter
+supports both IPv4 and IPv6 protocols, and is a
+stateful firewall.
+
+IPFilter is delivered with FreeBSD, NetBSD,
+Solaris 10 & 11. The current source code that can
+be accessed via sourceforge is covered by GPLv2.
+
+IPFilter can be installed as a runtime-loadable
+kernel module or directly incorporated into the
+operating system kernel
+
+routers
+
+routers help reinforce defense in depth.
+
 
 ### database
 
@@ -559,3 +618,8 @@ in from management. However, getting everyone on
 the same page when it comes to security can make a
 difference between preventing an attack and
 responding to an attack.
+
+[applicure-database]:http://www.applicure.com/blog/database-security-best-practice
+
+[sans-resources]:http://www.sans.org/security-resources/
+[cis-resources]:http://benchmarks.cisecurity.org/downloads/benchmarks/

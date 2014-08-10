@@ -7,7 +7,8 @@ ligula tempus, at luctus arcu accumsan.")
 ;; (setq no "")
 (setq t1 "aleph")
 (setq ti '("brave" "chi" "doom" "echo" "ferous" "ghost" "h"
-           "i" "j" "k" "l" "m" "n" "o" "p" "q" "r" "s" "t"))
+           "i" "j" "k" "l" "m" "n" "o" "p" "q" "r" "s" "t"
+           "u" "v" "w" "x" "y" "z" "aa" "ab" "ac" "ad" "ae"))
 
 (setq a 740) (setq -a (- 0 a))
 (setq b 640) (setq -b (- 0 b))
