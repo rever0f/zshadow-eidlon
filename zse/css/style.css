@@ -102,6 +102,7 @@ ul ul {
     transition: opacity 1s;
 }
 blockquote p{
+    opacity: 0.8;
     width: 100%;
     left:-0%;
 }
