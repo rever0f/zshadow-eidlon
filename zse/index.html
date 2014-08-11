@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <link href="css/reset.css" rel="stylesheet" />
+    
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="shortcut icon" href="css/favicon.png" />
+    <link rel="apple-touch-icon" href="css/apple-touch-icon.png" />
+    <!-- Code Prettifier: -->
+<link href="css/highlight.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+    <link href="css/style.css" rel="stylesheet" />
+<!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,800italic,300,400,800' rel='stylesheet' type='text/css'> -->
+
+  </head>
+
+  <body>
+  <div class="fallback-message">
+  <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+  <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+  </div>
+    <div id="impress">
+    <div class='step' id='home'>
+    
+<h3>SysAdmin Best Practices</h3>
+
+<blockquote>
+<p>There are two major products that came out of
+Berkeley: LSD and UNIX.  We do not believe this
+to be a coincidence.</p>
+
+<ul>
+<li>Jeremy S. Anderson</li>
+</ul>
+</blockquote>
+</div>
+      <div class='step' data-y='620.80005' data-z='-358.90002' data-rotate-x='-30' data-scale='0.97'>
+    
+<h3>Standard Toolset</h3>
+
+<ul>
+<li>Servers</li>
+<li>Logging</li>
+<li>Backups</li>
+<li>Web</li>
+<li>Database</li>
+</ul>
+</div>
+      <div class='step' data-y='480' data-x='-170' data-z='-358.90002' data-rotate-x='-30' data-scale='0.25'>
+    
+<p>Servers-those devices systems administrators are
+likely to deal with.</p>
+</div>
+      <div class='step' data-y='540' data-x='-155' data-z='-358.90002' data-rotate-x='-30' data-scale='0.25'>
+    
+<p>Logging-tracking all activity for funny business.</p>
+</div>
+      <div class='step' data-y='600' data-x='-145' data-z='-358.90002' data-rotate-x='-30' data-scale='0.25'>
+    
+<p>Backups-making redundant copies of all important
+data.</p>
+</div>
+      <div class='step' data-y='655' data-x='-135' data-z='-358.90002' data-rotate-x='-30' data-scale='0.25'>
+    
+<p>Web-presenting data on the world wide stage.</p>
+</div>
+      <div class='step' data-y='725' data-x='-125' data-z='-358.90002' data-rotate-x='-30' data-scale='0.25'>
+    
+<p>Database-where one can keep their data.</p>
+</div>
+      <div class='step' data-y='949.4' data-z='-949.4' data-rotate-x='-60' data-scale='0.94' id='shadow'>
+    
+<h3>Server</h3>
+
+<blockquote>
+<p>A computer lets you make more mistakes faster
+than any invention in human history - with the
+possible exceptions of handguns....</p>
+
+<ul>
+<li>Mitch Ratcliffe</li>
+</ul>
+</blockquote>
+</div>
+      <div class='step' data-y='919.10004' data-z='-1592.5' data-rotate-x='-90' data-scale='0.91'>
+    
+<h3>Unix</h3>
+
+<ul>
+<li>AT&amp;T Bell Labs
+
+<ul>
+<li>Ken Thompson</li>
+<li>Dennis Ritchie</li>
+<li>among others</li>
+</ul></li>
+<li>A modular design</li>
+<li>Focus on the &#39;Unix Philosophy&#39;
+
+<ul>
+<li>small</li>
+<li>simple</li>
+<li>extensible</li>
+</ul></li>
+</ul>
+</div>
+      <div class='step' data-y='563.2' data-z='-2103.2' data-rotate-x='-120' data-scale='0.88'>
+    
+<h3>Successors</h3>
+
+<ul>
+<li>Linux
+
+<ul>
+<li>Red Hat, Suse, CentOs</li>
+<li>Linus&#39;s College Project</li>
+<li>Release Early Release Often</li>
+<li>Bazaar</li>
+</ul></li>
+<li>Berkeley Software Distribution
+
+<ul>
+<li>FreeBSD, OpenBSD, NetBSD</li>
+<li>Shares Original Codebase with Unix</li>
+<li>Unix Philosophy</li>
+<li>Cathedral</li>
+</ul></li>
+</ul>
+</div>
+      <div class='step' data-y='0.0' data-z='-2346.0' data-rotate-x='-150' data-scale='0.85'>
+    
+<h3>Virtual</h3>
+
+<ul>
+<li>Qemu, Kvm, Virtual Box</li>
+<li>System/Process Virtualization</li>
+<li>Sandboxing</li>
+<li>Rebuild</li>
+<li>Upgrade</li>
+<li>Treat the Same as Physical Servers</li>
+<li>Track Duplication</li>
+</ul>
+</div>
+      <div class='step' data-y='-606.8' data-z='-2263.2' data-rotate-x='-180' data-scale='0.82' id='track'>
+    
+<h3>Logging</h3>
+
+<blockquote>
+<p>The best way to accelerate a Macintosh is at
+9.8m/sec/sec.</p>
+
+<ul>
+<li>Marcus Dolengo</li>
+</ul>
+</blockquote>
+</div>
+      <div class='step' data-y='-1090.2001' data-z='-1888.1001' data-rotate-x='-210' data-scale='0.79'>
+    
+<h3>Scope</h3>
+
+<ul>
+<li>Location-Location Location</li>
+<li>Tools-What Log</li>
+<li>What-Do you Log?</li>
+</ul>
+</div>
+      <div class='step' data-y='-1330.0' data-z='-1330.0' data-rotate-x='-240' data-scale='0.76'>
+    
+<h3>Where</h3>
+
+<ul>
+<li>In Situ Vulnerabilities</li>
+<li>Centralize</li>
+</ul>
+
+<h3>Tools</h3>
+
+<ul>
+<li>Nagios, Zabbix</li>
+<li>Plugins</li>
+</ul>
+</div>
+      <div class='step' data-y='-1277.5' data-z='-737.30005' data-rotate-x='-270' data-scale='0.73'>
+    
+<h3>Nagios and Zabbix</h3>
+
+<ul>
+<li>Active</li>
+<li>Clients</li>
+<li>Ownership</li>
+<li>Naemon, Ichinga</li>
+</ul>
+</div>
+      <div class='step' data-y='-966.00006' data-z='-259.00003' data-rotate-x='-300' data-scale='0.70'>
+    
+<h3>What?</h3>
+
+<ul>
+<li>What do you Need?</li>
+<li>All Files</li>
+<li>Processes</li>
+<li>Access</li>
+<li>Review Options</li>
+<li>Implement &amp; Review</li>
+</ul>
+</div>
+      <div class='step' data-y='-495.80002' data-z='0.0' data-rotate-x='-330' data-scale='0.67' id='mirror'>
+    
+<h3>Formation</h3>
+
+<ul>
+<li>Auditing</li>
+<li>Common Log Format</li>
+<li>Prodigal</li>
+</ul>
+</div>
+      <div class='step' data-y='0.0' data-z='0.0' data-rotate-x='-360' data-scale='0.64'>
+    
+<h3>Backups</h3>
+
+<blockquote>
+<p>There is only one satisfying way to boot a
+computer.</p>
+
+<ul>
+<li>J.H. Goldfuss</li>
+</ul>
+
+<p>Wise are those who backup, for their data will
+be safe in the the day of trouble. Even though
+they face the blue screen of death, they shall
+fear no evil.</p>
+
+<ul>
+<li>T.E. Ronneberg</li>
+</ul>
+</blockquote>
+</div>
+      <div class='step' data-y='390.40002' data-z='-225.70001' data-rotate-x='-390' data-scale='0.61'>
+    
+<h3>Mirroring</h3>
+
+<ul>
+<li>Where-Location Location Locations</li>
+<li>What-To Back Up?</li>
+<li>When-To Test?</li>
+</ul>
+</div>
+      <div class='step' data-y='585.80005' data-z='-585.80005' data-rotate-x='-420' data-scale='0.58'>
+    
+<h3>EveryWhere</h3>
+
+<ul>
+<li>Disaster Recovery</li>
+<li>Ease of Use</li>
+<li>Costs</li>
+<li>Lots Of Copies
+
+<ul>
+<li>Local</li>
+<li>Separate</li>
+<li>Remote</li>
+</ul></li>
+</ul>
+</div>
+      <div class='step' data-y='555.5' data-z='-962.5' data-rotate-x='-450' data-scale='0.55'>
+    
+<h3>This?</h3>
+
+<ul>
+<li>Full</li>
+<li>Incremental</li>
+<li>Differential</li>
+<li>Reverse Delta</li>
+</ul>
+</div>
+      <div class='step' data-y='332.8' data-z='-1242.7999' data-rotate-x='-480' data-scale='0.52'>
+    
+<h3>Testing</h3>
+
+<ul>
+<li>Successful Testing</li>
+<li>Monitoring/Logging</li>
+<li>Validation</li>
+<li>Rotate Hardware</li>
+</ul>
+</div>
+      <div class='step' data-y='0.0' data-z='-1352.4' data-rotate-x='-510' data-scale='0.49' id='web'>
+    
+<h3>Web</h3>
+
+<blockquote>
+<p>Those parts of the system that you can hit with
+a hammer (not advised) are called hardware;
+those program instructions that you can only
+curse at are called software.</p>
+
+<ul>
+<li>Author Unknown</li>
+</ul>
+</blockquote>
+</div>
+      <div class='step' data-y='-340.40002' data-z='-1269.6001' data-rotate-x='-540' data-scale='0.46'>
+    
+<h3>Attending</h3>
+
+<ul>
+<li>Firewall-Block Them Out</li>
+<li>Configuration-Control the Possibilities</li>
+<li>File Location-Mitigate Damage</li>
+<li>Resources-Tools And Guides</li>
+</ul>
+</div>
+      <div class='step' data-y='-593.4' data-z='-1027.7001' data-rotate-x='-570' data-scale='0.43'>
+    
+<h3>Walls Of Fire</h3>
+
+<ul>
+<li>firewalld, iptables, pf and ipfw</li>
+<li>White List-Only Allow Whats Needed</li>
+<li>Coordinate Routers and to Reinforce</li>
+</ul>
+</div>
+      <div class='step' data-y='-700.00006' data-z='-700.00006' data-rotate-x='-600' data-scale='0.40'>
+    
+<h3>Tuning</h3>
+
+<ul>
+<li>Disable Unneeded Processes</li>
+<li>Keep Up to Date &amp; Patched</li>
+<li>Chroot &amp; Webserver User</li>
+<li>Remote Admin Through A Secure Connection</li>
+</ul>
+</div>
+      <div class='step' data-y='-647.5' data-z='-373.7' data-rotate-x='-630' data-scale='0.37'>
+    
+<h3>Run Away</h3>
+
+<ul>
+<li>Remote Code</li>
+<li>Remote Sensitive Data</li>
+</ul>
+
+<h3>Assets</h3>
+
+<ul>
+<li><a href="http://www.sans.org/security-resources/">SysAdmin Audit Networking and Security(SANS)</a>
+<a href="http://www.sans.org/security-resources/">http://www.sans.org/security-resources/</a></li>
+<li><a href="http://benchmarks.cisecurity.org/downloads/benchmarks/">Center for Internet Security(CIS)</a>
+<a href="http://benchmarks.cisecurity.org/downloads/benchmarks/">http://benchmarks.cisecurity.org/downloads/benchmarks/</a></li>
+</ul>
+</div>
+      <div class='step' data-y='-469.20004' data-z='-125.80001' data-rotate-x='-660' data-scale='0.34'>
+    
+<h3>Database</h3>
+
+<blockquote>
+<p>“All problems in computer science can be solved
+by another level of indirection… Except for the
+problem of too many layers of indirection.”</p>
+
+<ul>
+<li>David Wheeler</li>
+</ul>
+</blockquote>
+</div>
+      <div class='step' data-y='-229.40001' data-z='0.0' data-rotate-x='-690' data-scale='0.31'>
+    
+<h3>The Knowledge</h3>
+
+<ul>
+<li>On A Remote Server</li>
+<li>Firewall Off</li>
+<li>Secure Access Files</li>
+<li>Secure Backups</li>
+</ul>
+</div>
+      <div class='step' data-y='0.0' data-z='0.0' data-rotate-x='-720' data-scale='0.28'>
+    
+<h3>Referee A</h3>
+
+<p>Quotes</p>
+
+<ul>
+<li><a href="http://www.quotegarden.com/sys-admin-day.html">Quote Garden</a>
+<a href="http://www.quotegarden.com/sys-admin-day.html">http://www.quotegarden.com/sys-admin-day.html</a></li>
+<li><a href="http://lonesysadmin.net/2010/06/29/levels-of-indirection/">Lone SysAdmin</a>
+<a href="http://lonesysadmin.net/2010/06/29/levels-of-indirection/">http://lonesysadmin.net/2010/06/29/levels-of-indirection/</a></li>
+</ul>
+
+<p>Server</p>
+
+<ul>
+<li><a href="http://technet.microsoft.com/en-us/magazine/gg131921.aspx">Virtual Technet</a>
+<a href="http://technet.microsoft.com/en-us/magazine/gg131921.aspx">http://technet.microsoft.com/en-us/magazine/gg131921.aspx</a></li>
+</ul>
+</div>
+      <div class='step' data-y='160.0' data-z='-92.5' data-rotate-x='-750' data-scale='0.25'>
+    
+<h3>Referee B</h3>
+
+<p>Log</p>
+
+<ul>
+<li><a href="http://www.cisco.com/c/en/us/support/docs/ip/access-lists/13608-21.html#anc57">Cisco</a>
+<a href="http://www.cisco.com/c/en/us/support/docs/ip/access-lists/13608-21.html#anc57">http://www.cisco.com/c/en/us/support/docs/ip/access-lists/13608-21.html#anc57</a></li>
+<li><a href="http://stackoverflow.com/questions/673575/what-are-the-best-practices-for-logging-an-enterprise-application">Stack Over Flow</a>
+<a href="http://stackoverflow.com/questions/673575/what-are-the-best-practices-for-logging-an-enterprise-application">http://stackoverflow.com/questions/673575/what-are-the-best-practices-for-logging-an-enterprise-application</a></li>
+</ul>
+
+<p>Backup</p>
+
+<ul>
+<li><a href="http://technet.microsoft.com/en-us/library/backup-best-practices-2.aspx">Technet</a>
+<a href="http://technet.microsoft.com/en-us/library/backup-best-practices-2.aspx">http://technet.microsoft.com/en-us/library/backup-best-practices-2.aspx</a></li>
+</ul>
+</div>
+      <div class='step' data-y='222.20003' data-z='-222.20003' data-rotate-x='-780' data-scale='0.22'>
+    
+<h3>Referee C</h3>
+
+<p>Backup Cont.</p>
+
+<ul>
+<li><a href="http://www.iqpc.com/uploadedFiles/EventRedesign/UK/2010/May/11376004/Assets/DIG-003_eDiscovery_WP_V1.pdf">IQPC</a>
+<a href="http://www.iqpc.com/uploadedFiles/EventRedesign/UK/2010/May/11376004/Assets/DIG-003_eDiscovery_WP_V1.pdf">http://www.iqpc.com/uploadedFiles/EventRedesign/UK/2010/May/11376004/Assets/DIG-003_eDiscovery_WP_V1.pdf</a></li>
+</ul>
+
+<p>Web Servers</p>
+
+<ul>
+<li><a href="http://www.boran.com/security/webserver_practices.html">Boran</a>
+<a href="http://www.boran.com/security/webserver_practices.html">http://www.boran.com/security/webserver_practices.html</a></li>
+</ul>
+</div>
+      <div class='step' data-y='191.9' data-z='-332.5' data-rotate-x='-810' data-scale='0.19'>
+    
+<h3>Referee D</h3>
+
+<p>Database</p>
+
+<ul>
+<li><a href="http://www.applicure.com/blog/database-security-best-practice">Applicure</a>
+<a href="http://www.applicure.com/blog/database-security-best-practice">http://www.applicure.com/blog/database-security-best-practice</a></li>
+</ul>
+
+<p>For full references See Source Code</p>
+
+      </div>
+    <script src="js/impress.js"></script>
+    <script>impress().init();</script>
+  </body>
+</html>
+    
