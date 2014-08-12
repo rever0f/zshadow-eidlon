@@ -50,11 +50,10 @@ Database-where one can keep their data.
 
 ### Server
 
-> A computer lets you make more mistakes faster
-> than any invention in human history - with the
-> possible exceptions of handguns....
+> There is only one satisfying way to boot a
+> computer.
 
-> - Mitch Ratcliffe
+> - J.H. Goldfuss
 
 ---
 =data-y='919.10004' data-z='-1592.5' data-rotate-x='-90' data-scale='0.91'
@@ -89,6 +88,21 @@ Database-where one can keep their data.
 
 ---
 =data-y='0.0' data-z='-2346.0' data-rotate-x='-150' data-scale='0.85'
+
+### Deployment
+
+- Puppet
+    - Ruby
+    - Declarative Configuration
+- Chef
+    - Ruby and Erlang
+    - Recipes
+- Ansible
+    - Python
+    - OpenSSH
+
+---
+=data-y='0.0' data-z='-2346.0' data-rotate-x='-150' data-scale='1.35'
 
 ### Virtual
 
@@ -169,11 +183,6 @@ Database-where one can keep their data.
 
 ### Backups
 
-> There is only one satisfying way to boot a
-> computer.
-
-> - J.H. Goldfuss
-
 > Wise are those who backup, for their data will
 > be safe in the the day of trouble. Even though
 > they face the blue screen of death, they shall
@@ -252,7 +261,7 @@ Database-where one can keep their data.
 
 - firewalld, iptables, pf and ipfw
 - White List-Only Allow Whats Needed
-- Coordinate Routers and to Reinforce
+- Coordinate Routers to Reinforce
 
 ---
 =data-y='-700.00006' data-z='-700.00006' data-rotate-x='-600' data-scale='0.40'
